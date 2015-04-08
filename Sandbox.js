@@ -21,8 +21,7 @@
            target.delay(2);
            window.buttons()["Skip"].tap();
            //target.frontMostApp().mainWindow().logElementTree();
-           target.delay(2);
-           window.buttons()["icon done"].tap();
+           
            target.delay(2);
            window.buttons()["Color"].tap();
            target.delay(2);

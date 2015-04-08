@@ -9,8 +9,7 @@ test ("Проверим слайдеры при редактировании т�
       target.delay(2);
       window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
       window.buttons()["Skip"].tap();
-      target.delay(2);
-      window.buttons()["icon done"].tap();
+      
       target.delay(2);
       window.buttons()["Edit Text"].tap();
       app.keyboard().typeString("This is test session. Do not forbid!")
@@ -45,8 +44,7 @@ test("Проверим что слайдер Size есть на экране с�
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
      window.buttons()["Skip"].tap();
-     target.delay(2);
-     window.buttons()["icon done"].tap();
+     
      target.delay(5);
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
@@ -85,8 +83,7 @@ test("Проверим что слайдер Shadow есть на экране �
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
      window.buttons()["Skip"].tap();
-     target.delay(2);
-     window.buttons()["icon done"].tap();
+    
      target.delay(5);
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
@@ -124,8 +121,7 @@ test("Проверим что слайдер Shadow есть на экране �
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
      window.buttons()["Skip"].tap();
-     target.delay(2);
-     window.buttons()["icon done"].tap();
+     
      target.delay(5);
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
@@ -161,8 +157,7 @@ test("Проверим что слайдер Shadow есть на экране �
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
      window.buttons()["Skip"].tap();
-     target.delay(2);
-     window.buttons()["icon done"].tap();
+     
      target.delay(5);
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
@@ -199,8 +194,7 @@ test("Проверим что слайдер Shadow есть на экране �
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
      window.buttons()["Skip"].tap();
-     target.delay(2);
-     window.buttons()["icon done"].tap();
+     
      target.delay(5);
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
@@ -237,8 +231,7 @@ test("Проверим что слайдер Shadow есть на экране �
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
      window.buttons()["Skip"].tap();
-     target.delay(2);
-     window.buttons()["icon done"].tap();
+     
      target.delay(5);
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");

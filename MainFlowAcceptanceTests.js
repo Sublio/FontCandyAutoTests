@@ -49,8 +49,7 @@ test("Выберем одну картинку  и что - нибудь с не
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].images()[0].tap();
      window.buttons()["Skip"].tap();
-     target.delay(3);
-     window.buttons()["icon done"].tap();
+     
      target.delay(4);
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("Some very Long text integer dfgkjdhghshd;fghsdljflijsdfjlsdjfl")

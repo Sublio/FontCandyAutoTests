@@ -60,8 +60,7 @@ test("Проверим все Dividers из Shapes  категории по од
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
      window.buttons()["Skip"].tap();
-     target.delay(2);
-     window.buttons()["icon done"].tap();
+    
      target.delay(4);
      window.buttons()["icon cross"].tap();
      
@@ -107,8 +106,7 @@ test("Проверим все Dividers из Banners категории по од
  target.delay(2);
  window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
  window.buttons()["Skip"].tap();
- target.delay(3);
- window.buttons()["icon done"].tap();
+ 
  target.delay(4);
  window.buttons()["icon cross"].tap();
  
@@ -157,8 +155,7 @@ test("Проверим все Dividers из Shapes категории по од�
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
      window.buttons()["Skip"].tap();
-     target.delay(4);
-     window.buttons()["icon done"].tap();
+    
      target.delay(2);
      window.buttons()["icon cross"].tap();
      
@@ -206,8 +203,7 @@ test("Проверим все Dividers из Tribal категории по од�
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
      window.buttons()["Skip"].tap();
-     target.delay(4);
-     window.buttons()["icon done"].tap();
+     
      target.delay(3);
      window.buttons()["icon cross"].tap();
      
@@ -253,8 +249,7 @@ test("Проверим все Dividers из Burst категории по одн
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
      window.buttons()["Skip"].tap();
-     target.delay(3);
-     window.buttons()["icon done"].tap();
+     
      target.delay(4);
      window.buttons()["icon cross"].tap();
      
