@@ -156,7 +156,7 @@ test("Проверим все Dividers из Shapes категории по од�
      window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
      window.buttons()["Skip"].tap();
     
-     target.delay(2);
+     target.delay(6);
      window.buttons()["icon cross"].tap();
      
      target.delay(2)
