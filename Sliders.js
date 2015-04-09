@@ -268,7 +268,7 @@ test("Проверим что слайдер Shadow есть на экране �
 test("Проверяю доступность слайдера HUE и подергаю его", function(){
 
   target.delay(3);
-  windows.scrollViews()[0].collectionViews()[0].cells()[0].tap();
+  window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
   window.buttons()["Skip"].tap();
   window.buttons()["Color"].tap();
   target.delay(2);
