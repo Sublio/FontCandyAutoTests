@@ -11,7 +11,7 @@ test ("Добавляем дефолтную надпись Hello World и пр�
       
       window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
       
-      window.buttons()["Skip"].tap();
+      window.buttons()["DON'T CROP"].tap();
       
       target.delay(2);
       window.buttons()["icon cross"].tap();
@@ -69,7 +69,7 @@ test ("Добавляем надпись Hello World и проверяем на 
       window.scrollViews()[0].collectionViews()[0].cells()[6].images()[0].tap();
       
       UIATarget.localTarget().pushTimeout(10);
-      window.buttons()["Skip"].tap();
+      window.buttons()["DON'T CROP"].tap();
       
       target.delay(8);
       window.buttons()["icon cross"].tap();

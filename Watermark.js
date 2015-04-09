@@ -9,7 +9,7 @@ test("Проверяю что ватермарка есть на экране и
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
      target.delay(2);
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
      
      target.delay(2);
      window.images()["watermark1-small.png"].checkIsValid();

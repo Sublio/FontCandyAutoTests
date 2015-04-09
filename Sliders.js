@@ -8,7 +8,7 @@ test ("Проверим слайдеры при редактировании т�
       target.pushTimeout(5);
       target.delay(2);
       window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
-      window.buttons()["Skip"].tap();
+      window.buttons()["DON'T CROP"].tap();
       
       target.delay(2);
       window.buttons()["Edit Text"].tap();
@@ -43,7 +43,7 @@ test("Проверим что слайдер Size есть на экране с�
      target.pushTimeout(5);
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
      
      target.delay(5);
      window.buttons()["Edit Text"].tap();
@@ -82,7 +82,7 @@ test("Проверим что слайдер Shadow есть на экране �
      target.pushTimeout(5);
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
     
      target.delay(5);
      window.buttons()["Edit Text"].tap();
@@ -120,7 +120,7 @@ test("Проверим что слайдер Shadow есть на экране �
      target.pushTimeout(5);
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
      
      target.delay(5);
      window.buttons()["Edit Text"].tap();
@@ -156,7 +156,7 @@ test("Проверим что слайдер Shadow есть на экране �
      target.pushTimeout(5);
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
      
      target.delay(5);
      window.buttons()["Edit Text"].tap();
@@ -193,7 +193,7 @@ test("Проверим что слайдер Shadow есть на экране �
      target.pushTimeout(5);
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
      
      target.delay(5);
      window.buttons()["Edit Text"].tap();
@@ -230,7 +230,7 @@ test("Проверим что слайдер Shadow есть на экране �
      target.pushTimeout(5);
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
      
      target.delay(5);
      window.buttons()["Edit Text"].tap();
@@ -269,7 +269,7 @@ test("Проверяю доступность слайдера HUE и подер
 
   target.delay(3);
   window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
-  window.buttons()["Skip"].tap();
+  window.buttons()["DON'T CROP"].tap();
   window.buttons()["Color"].tap();
   target.delay(2);
   log("Проверяю слайдер HUE");
@@ -296,7 +296,7 @@ test("Проверяю доступность слайдера HUE и подер
 test("Проверяю доступность слайдера Opacity и подергаю его", function(){
   target.delay(3);
   windows.scrollViews()[0].collectionViews()[0].cells()[0].tap();
-  window.buttons()["Skip"].tap();
+  window.buttons()["DON'T CROP"].tap();
   window.buttons()["Color"].tap();
   target.delay(2);
   log("Проверяю слайдер HUE");

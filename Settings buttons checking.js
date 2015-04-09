@@ -17,10 +17,13 @@ test("Проверяю что на экране Settings все кнопки н�
        var result3 = window.tableViews()[0].cells()["REPORT A BUG"].checkIsValid();
        target.delay(2);
        var result4 = window.tableViews()[0].cells()["GET IN TOUCH"].checkIsValid();
+       target.delay(2);
+       var result5 = window.tableViews()[0].cells()["RESET HINT VIDEOS"].checkIsValid();
+       targetd.delay(2);
      
 
 
-     if(result1&result2&result3&result4===true){
+     if(result1&result2&result3&result4&result5===true){
         
        
         window.buttons()["icon arrow down"].tap();

@@ -8,7 +8,7 @@ test ("Проверяю что можно загрузить картинку в
       target.delay(2);
       window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
       target.delay(2);
-      window.buttons()["Skip"].tap();
+      window.buttons()["DON'T CROP"].tap();
       
       //target.frontMostApp().mainWindow().logElementTree();
       target.delay(2);

@@ -59,7 +59,7 @@ test("Проверим все Dividers из Shapes  категории по од
      
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
     
      target.delay(4);
      window.buttons()["icon cross"].tap();
@@ -105,7 +105,7 @@ test("Проверим все Dividers из Shapes  категории по од
 test("Проверим все Dividers из Banners категории по одному", function(){
  target.delay(2);
  window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
- window.buttons()["Skip"].tap();
+ window.buttons()["DON'T CROP"].tap();
  
  target.delay(4);
  window.buttons()["icon cross"].tap();
@@ -154,7 +154,7 @@ test("Проверим все Dividers из Banners категории по од
 test("Проверим все Dividers из Shapes категории по одному", function(){
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
     
      target.delay(6);
      window.buttons()["icon cross"].tap();
@@ -202,7 +202,7 @@ test("Проверим все Dividers из Shapes категории по од�
 test("Проверим все Dividers из Tribal категории по одному", function(){
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP".tap();
      
      target.delay(3);
      window.buttons()["icon cross"].tap();
@@ -248,7 +248,7 @@ test("Проверим все Dividers из Tribal категории по од�
 test("Проверим все Dividers из Burst категории по одному", function(){
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
      
      target.delay(4);
      window.buttons()["icon cross"].tap();
