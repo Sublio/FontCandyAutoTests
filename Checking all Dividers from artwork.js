@@ -202,7 +202,7 @@ test("Проверим все Dividers из Shapes категории по од�
 test("Проверим все Dividers из Tribal категории по одному", function(){
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[2].tap();
-     window.buttons()["DON'T CROP".tap();
+     window.buttons()["DON'T CROP"].tap();
      
      target.delay(3);
      window.buttons()["icon cross"].tap();

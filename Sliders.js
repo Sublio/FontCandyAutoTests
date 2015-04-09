@@ -14,13 +14,13 @@ test ("Проверим слайдеры при редактировании т�
       window.buttons()["Edit Text"].tap();
       app.keyboard().typeString("This is test session. Do not forbid!")
       target.delay(2);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       target.delay(1);
       window.buttons()["icon adjust"].tap();
       target.delay(2);
       window.scrollViews()[0].sliders()[0].dragToValue(1.00);
       target.delay(2);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       target.delay(2);
       window.buttons()["icon setting"].tap();
       target.delay(2);
@@ -49,7 +49,7 @@ test("Проверим что слайдер Size есть на экране с�
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
      target.delay(2);
-     window.buttons()[14].tap();
+     window.buttons()[15].tap();
      target.delay(2);
      window.buttons()["icon adjust"].tap();
      target.delay(2);
@@ -62,7 +62,7 @@ test("Проверим что слайдер Size есть на экране с�
      	UIALogger.logFail();
      }
      target.delay(2);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       target.delay(2);
       window.buttons()["icon setting"].tap();
       target.delay(2);
@@ -88,7 +88,7 @@ test("Проверим что слайдер Shadow есть на экране �
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
      target.delay(2);
-     window.buttons()[14].tap();
+     window.buttons()[15].tap();
      target.delay(2);
      window.buttons()["icon adjust"].tap();
      target.delay(2);
@@ -101,7 +101,7 @@ test("Проверим что слайдер Shadow есть на экране �
      	UIALogger.logFail();
      }
      target.delay(2);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       target.delay(2);
       window.buttons()["icon setting"].tap();
       target.delay(2);
@@ -126,7 +126,7 @@ test("Проверим что слайдер Shadow есть на экране �
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
      target.delay(2);
-     window.buttons()[14].tap();
+     window.buttons()[15].tap();
      target.delay(2);
      window.buttons()["icon adjust"].tap();
      target.delay(2);
@@ -139,7 +139,7 @@ test("Проверим что слайдер Shadow есть на экране �
      	UIALogger.logFail();
      }
      target.delay(2);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       target.delay(2);
       window.buttons()["icon setting"].tap();
       target.delay(2);
@@ -162,7 +162,7 @@ test("Проверим что слайдер Shadow есть на экране �
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
      target.delay(2);
-     window.buttons()[14].tap();
+     window.buttons()[15].tap();
      target.delay(2);
      window.buttons()["icon adjust"].tap();
      target.delay(2);
@@ -175,7 +175,7 @@ test("Проверим что слайдер Shadow есть на экране �
      	UIALogger.logFail();
      }
      target.delay(2);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       target.delay(2);
       window.buttons()["icon setting"].tap();
       target.delay(2);
@@ -199,7 +199,7 @@ test("Проверим что слайдер Shadow есть на экране �
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
      target.delay(2);
-     window.buttons()[14].tap();
+     window.buttons()[15].tap();
      target.delay(2);
      window.buttons()["icon adjust"].tap();
      target.delay(2);
@@ -212,7 +212,7 @@ test("Проверим что слайдер Shadow есть на экране �
      	UIALogger.logFail();
      }
      target.delay(2);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       target.delay(2);
       window.buttons()["icon setting"].tap();
       target.delay(2);
@@ -236,7 +236,7 @@ test("Проверим что слайдер Shadow есть на экране �
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("This is test session");
      target.delay(2);
-     window.buttons()[14].tap();
+     window.buttons()[15].tap();
      target.delay(2);
      window.buttons()["icon adjust"].tap();
      target.delay(2);
@@ -249,7 +249,7 @@ test("Проверим что слайдер Shadow есть на экране �
      	UIALogger.logFail();
      }
      target.delay(2);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       target.delay(2);
       window.buttons()["icon setting"].tap();
       target.delay(2);
@@ -273,16 +273,16 @@ test("Проверяю доступность слайдера HUE и подер
   window.buttons()["Color"].tap();
   target.delay(2);
   log("Проверяю слайдер HUE");
-  if(window.scrollViews()[0].sliders()[0].isValid()){
+  if(window.sliders()[0].isValid()){
 
-           window.scrollViews()[0].sliders()[0].dragToValue(1.00);
+           window.sliders()[0].dragToValue(1.00);
 
      }
      else {
       UIALogger.logFail();
      }
   target.delay(2);
-  window.buttons()[14].tap();
+  window.buttons()["icon done"].tap();
   target.delay(2);
   window.buttons()["icon setting"].tap();
   target.delay(2);
@@ -295,21 +295,53 @@ test("Проверяю доступность слайдера HUE и подер
 
 test("Проверяю доступность слайдера Opacity и подергаю его", function(){
   target.delay(3);
-  windows.scrollViews()[0].collectionViews()[0].cells()[0].tap();
+  window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
   window.buttons()["DON'T CROP"].tap();
   window.buttons()["Color"].tap();
   target.delay(2);
   log("Проверяю слайдер HUE");
-  if(window.scrollViews()[0].sliders()[1].isValid()){
+  if(window.sliders()[1].isValid()){
 
-           window.scrollViews()[0].sliders()[1].dragToValue(1.00);
+           window.sliders()[1].dragToValue(1.00);
 
      }
      else {
       UIALogger.logFail();
      }
   target.delay(2);
-  window.buttons()[14].tap();
+  window.buttons()["icon done"].tap();
+  target.delay(2);
+  window.buttons()["icon setting"].tap();
+  target.delay(2);
+  window.tableViews()[0].cells()["START OVER"].tap();
+  target.delay(2);
+  window.buttons()["icon back"].tap();
+  target.delay(1);
+
+})
+
+
+
+
+test("Проверяю слайдер на Eraser и подергаю его", function(){
+
+  target.delay(2);
+  window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
+  window.buttons()["DON'T CROP"].tap();
+  target.delay(2);
+  window.buttons()["icon cross"].tap();
+  window.buttons()["Add Text"].tap();
+  target.delay(2);
+  app.keyboard().typeString("This is Test session");
+  target.delay(2);
+  window.buttons()[15].tap();
+  window.buttons()["icon eraser"].tap();
+  window.scrollViews()[0].sliders()[6].dragToValue(1.00);
+  target.delay(2);
+  
+  target.delay(2);
+  
+  window.buttons(15).tap();
   target.delay(2);
   window.buttons()["icon setting"].tap();
   target.delay(2);

@@ -19,7 +19,7 @@ test("Проверяю что на экране Settings все кнопки н�
        var result4 = window.tableViews()[0].cells()["GET IN TOUCH"].checkIsValid();
        target.delay(2);
        var result5 = window.tableViews()[0].cells()["RESET HINT VIDEOS"].checkIsValid();
-       targetd.delay(2);
+       target.delay(2);
      
 
 

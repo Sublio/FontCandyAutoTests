@@ -48,14 +48,14 @@ test("Проверим что Settings кнопка доступна и посм
 test("Выберем одну картинку  и что - нибудь с ней сделаем", function(){
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].images()[0].tap();
-     window.buttons()["Skip"].tap();
+     window.buttons()["DON'T CROP"].tap();
      
      target.delay(4);
      window.buttons()["Edit Text"].tap();
      app.keyboard().typeString("Some very Long text integer dfgkjdhghshd;fghsdljflijsdfjlsdjfl")
-     window.buttons()[14].tap();
+     window.buttons()[15].tap();
      
-     window.buttons()[14].tap();
+     window.buttons()[15].tap();
      
      target.delay(2);
      window.buttons()["icon setting"].tap();
@@ -135,7 +135,7 @@ test("Проверим все шрифты по одному добавляя к
      
      //Если удалить следующиую строчку - то возникнет баг
      
-     window.buttons()[14].tap();
+     window.buttons()[15].tap();
      
      //Если удалить предыдую строчку - то возникте баг
      

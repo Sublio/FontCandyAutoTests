@@ -20,10 +20,10 @@ test ("Добавляем дефолтную надпись Hello World и пр�
       target.delay(2);
       app.keyboard().typeString("Hello world");
       target.delay(4);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       
       target.delay(2);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       target.delay(1);
       window.buttons()["Color"].tap();
       
@@ -78,11 +78,11 @@ test ("Добавляем надпись Hello World и проверяем на 
       target.delay(2);
       app.keyboard().typeString("Hello world");
       target.delay(2);
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       
       target.delay(2);
       
-      window.buttons()[14].tap();
+      window.buttons()[15].tap();
       window.buttons()["Image"].tap();
       
       target.delay(2);
