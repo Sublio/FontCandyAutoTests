@@ -9,3 +9,4 @@
 #import "Settings buttons checking.js";
 #import "Checking all Dividers from artwork.js";
 #import "Sandbox.js";
+#import "sliderFromEraser.js";

@@ -1,7 +1,7 @@
 #import "Screen.js";
 #import "env.js";
 
-
+/*
 
 
 test ("Проверим слайдеры при редактировании текста. Вкладка Sliders", function(){
@@ -320,7 +320,7 @@ test("Проверяю доступность слайдера Opacity и под
 
 })
 
-
+*/
 
 
 test("Проверяю слайдер на Eraser и подергаю его", function(){
@@ -336,6 +336,13 @@ test("Проверяю слайдер на Eraser и подергаю его", f
   target.delay(2);
   window.buttons()[15].tap();
   window.buttons()["icon eraser"].tap();
+  if()
+  if(window.staticTexts()["Using eraser will limit editing of this layer"]){
+
+    window.buttons()["Don't show again"].tap();
+    window.buttons()["Ok"].tap();
+  }
+  
   window.scrollViews()[0].sliders()[6].dragToValue(1.00);
   target.delay(2);
   
