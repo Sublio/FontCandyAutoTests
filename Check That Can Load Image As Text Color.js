@@ -2,7 +2,7 @@
 #import "env.js";
 
 //Iphone
-/*
+
 
 test ("Проверяю что можно загрузить картинку в качестве цвета текста", function(){
       target.delay(2);
@@ -27,4 +27,4 @@ test ("Проверяю что можно загрузить картинку в
       window.buttons()["icon back"].tap();
       target.delay(1);
      
-      });*/
+      });

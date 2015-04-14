@@ -4,7 +4,7 @@
 //Iphone
 
 
-/*
+
 
 test ("Cheking that Inspiration Button is available", function(){
       target.delay(2);
@@ -203,7 +203,7 @@ if (target.model().match("iPad")) {
 
 };
 
-*/
+
 
       
 //iphone
