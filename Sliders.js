@@ -342,6 +342,7 @@ test("Проверяю слайдер на Eraser и подергаю его", f
   if(window.staticTexts()["Using eraser will limit editing of this layer"].isValid()){
 
     window.buttons()["Don't show again"].tap();
+    target.delay(2);
     window.buttons()["Ok"].tap();
   }
   else{

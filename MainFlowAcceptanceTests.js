@@ -12,7 +12,7 @@ test ("Cheking that Inspiration Button is available", function(){
       target.delay(2);
       log("Ждем пока картинки загрузятся");
       target.delay(4);
-      window.collectionViews()[0].cells()[80].scrollToVisible();
+      window.collectionViews()[0].cells()[10].scrollToVisible();
       target.delay(2);
       window.buttons()[5].tap();
      
@@ -99,7 +99,8 @@ test("Выберем одну картинку  и что - нибудь с не
      window.buttons()["icon add text"].tap();
      app.keyboard().typeString("Some very Long text integer dfgkjdhghshd;fghsdljflijsdfjlsdjfl")
      target.delay(2);
-     app.windows()[1].buttons()["icon done"].tap();
+     
+     app.windows()[1].buttons()["icon done"].tap();;
      target.delay(2);
      window.buttons()["icon setting"].tap();
      window.tableViews()[0].cells()["START OVER"].tap();
@@ -187,7 +188,7 @@ if (target.model().match("iPad")) {
      target.delay(2);
      app.windows()[1].buttons()["icon done"].tap();
      target.delay(2);
-     app.window()[1].buttons()[14].tap();
+     //app.windows()[1].buttons()[14].tap();
      
      
      target.delay(1);
