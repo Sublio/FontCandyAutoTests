@@ -13,8 +13,8 @@ test("Получение координат кнопки Edit Text в главн
     
 //Распарсивание объекта!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-
-var myObj = window.buttons()["Edit Text"].rect();
+/*
+var myObj = window.textFields();
 log(JSON.stringify(myObj));
 
 
@@ -24,6 +24,14 @@ log(JSON.stringify(myObj));
 
 //Распарсивание объекта !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
 
+*/
 
+log(window.buttons()[1].logElement());
 
 })
+
+
+
+
+
+
