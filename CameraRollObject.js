@@ -35,12 +35,7 @@ var CameraRollScreen = {
     	window.scrollViews()[0].collectionViews()[0].cells()[position].tap();
     },
 
-    button: function(name){
-       window.staticTexts()["Camera Roll"].scrollToVisible();
-       target.delay(2);
-       window.staticText()["Camera Roll"].checkIsValid();
-
-    }
+    
 
 
 

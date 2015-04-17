@@ -7,5 +7,5 @@
 test("Проверка объекта", function(){
     
 	var s = CameraRollScreen;
-	s.button();
+	s.camera();
 })
