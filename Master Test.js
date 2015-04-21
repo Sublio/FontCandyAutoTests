@@ -1,5 +1,6 @@
 #import "Screen.js";
 #import "env.js";
+#import "CheckTutorial.js";
 #import "CheckAllButtonsFromCamera.js";
 #import "Check That Can Load Image As Text Color.js";
 #import "Check all color Preset.js";

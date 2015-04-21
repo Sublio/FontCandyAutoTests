@@ -343,7 +343,7 @@ test("Проверяю слайдер на Eraser и подергаю его", f
 
     window.buttons()["Don't show again"].tap();
     target.delay(2);
-    window.buttons()["Ok"].tap();
+    window.buttons()["OK"].tap();
   }
   else{
 

@@ -17,7 +17,7 @@
      
      test ("Проверяю что можно загрузить картинку в качестве цвета текста", function(){
            target.delay(2);
-           window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
+           window.scrollViews()[0].collectionViews()[0].cells()[1].tap();
            target.delay(2);
            window.buttons()["DON'T CROP"].tap();
            //target.frontMostApp().mainWindow().logElementTree();

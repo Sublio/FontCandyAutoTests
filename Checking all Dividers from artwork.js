@@ -284,7 +284,7 @@ test("Проверим все Dividers из Burst категории по одн
      window.tableViews()[0].tapWithOptions({tapOffset:{x:0.56, y:0.03}});
      
      window.buttons()["icon back"].tap();
-     target.delay(1);       
+     target.delay(3);       
      
      
      
