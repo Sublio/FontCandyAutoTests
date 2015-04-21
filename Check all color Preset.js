@@ -66,7 +66,7 @@ test ("Добавляем дефолтную надпись Hello World и пр�
 test ("Добавляем надпись Hello World и проверяем на всех фильтрах", function(){
       
       target.delay(2);
-      window.scrollViews()[0].collectionViews()[0].cells()[6].images()[0].tap();
+      window.scrollViews()[0].collectionViews()[0].cells()[2].images()[0].tap();
       
       UIATarget.localTarget().pushTimeout(10);
       window.buttons()["DON'T CROP"].tap();
