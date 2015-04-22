@@ -11,9 +11,9 @@ test("Проверим слайдер на eraser ", function(){
 
 
 
-	 target.pushTimeout(2);
+	 //target.pushTimeout(2);
 
-     target.delay(2);
+     target.delay(4);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
      window.buttons()["DON'T CROP"].tap();
      window.buttons()["Edit Text"].tap();

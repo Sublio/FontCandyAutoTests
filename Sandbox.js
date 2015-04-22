@@ -32,6 +32,12 @@
            window.collectionViews()[0].cells()[1].tap();
            target.delay(4);
            window.sliders()[1].dragToValue(0.00);
+           window.buttons()["icon done"].tap();
+           window.buttons()["icon setting"].tap();
+           target.delay(1);
+           window.tableViews()[0].tapWithOptions({tapOffset:{x:0.52, y:0.04}});
+           window.buttons()["icon back"].tap();
+           target.delay(2);
            
            
            });

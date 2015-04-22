@@ -113,3 +113,93 @@ if(target.model().match("iPad")){
 };
 
 
+
+//iphone
+
+if(target.model().match("iPhone")){
+
+	test("Проверяю что при входе в Colors показывается туториал", function(){
+
+		log("Айфон");
+		target.delay(2);
+		window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
+		window.buttons()["DON'T CROP"].tap();
+		target.delay(2);
+		window.buttons()["Color"].tap();
+		log("Туториал есть на экране Color");
+		window.buttons()["btn close"].tap();
+        window.buttons()["icon done"].tap();
+        target.delay(2);
+        window.buttons()["icon setting"].tap();
+        window.tableViews()[0].cells()["START OVER"].tap();
+        window.buttons()["icon back"].tap();
+
+	})
+};
+
+
+//ipad
+
+if(target.model().match("iPad")){
+
+	test("Проверяю что при входе в Colors показывается туториал", function(){
+
+		log("Айпад");
+		target.delay(2);
+		window.scrollViews()[0].collectionViews()[0].tap();
+		window.buttons()["DON'T CROP"].tap();
+		target.delay(2);
+		window.buttons()["icon color"].tap();
+		target.delay(1);
+		window.buttons()["btn close"].tap();
+		window.buttons()["icon setting"].tap();
+		window.tableViews()[0].cells()["START OVER"].tap();
+		window.buttons()["icon back"].tap();
+
+	})
+};
+
+
+//iphone
+
+if(target.model().match("iPhone")){
+
+	test("Проверяю что при входе в Image показывается туториал", function(){
+
+		log("Айфон");
+		target.delay(2);
+		window.scrollViews()[0].collectionViews()[0].tap();
+		window.buttons()["DON'T CROP"].tap();
+		target.delay(2);
+		window.buttons()["Image"].tap();
+		log("Туториал есть на экране");
+		window.buttons()["btn close"].tap();
+		window.buttons()["icon done"].tap();
+		target.delay(2);
+		window.buttons()["icon setting"].tap();
+		window.tableViews()[0].cells()["START OVER"].tap();
+		window.buttons()["icon back"].tap();
+
+	})
+};
+
+//ipad
+
+if(target.model().match("iPad")){
+
+	test("Проверяю что при входе в Iamge показывается туториал",function(){
+
+		log("айпад");
+		target.delay(2);
+		window.scrollViews()[0].collectionViews()[0].tap();
+		window.buttons()["DON'T CROP"].tap();
+		target.delay(2);
+		window.buttons()["icon image"].tap();
+		target.delay(2);
+		window.buttons()["btn close"].tap();
+		window.buttons()["icon setting"].tap();
+		window.tableViews()[0].cells()["START OVER"].tap();
+		window.buttons()["icon back"].tap();
+	})
+};
+
