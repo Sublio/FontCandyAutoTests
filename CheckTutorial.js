@@ -187,7 +187,7 @@ if(target.model().match("iPhone")){
 
 if(target.model().match("iPad")){
 
-	test("Проверяю что при входе в Iamge показывается туториал",function(){
+	test("Проверяю что при входе в Image показывается туториал",function(){
 
 		log("айпад");
 		target.delay(2);

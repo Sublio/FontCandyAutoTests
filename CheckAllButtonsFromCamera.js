@@ -7,6 +7,7 @@
 test("Проверяем все кнопки на экране камеры", function(){
      
      target.delay(2);
+     target.
      window.buttons()["Camera"].tap();
      log("Checking all buttons are visible");
      log("On camera screen had 5 buttons");
