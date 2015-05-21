@@ -12,9 +12,21 @@ test ("Cheking that Inspiration Button is available", function(){
       target.delay(2);
       log("Ждем пока картинки загрузятся");
       target.delay(4);
-      window.collectionViews()[0].cells()[80].scrollToVisible();
-      target.delay(2);
-      window.buttons()[5].tap();
+      //window.collectionViews()[0].cells()[80].scrollToVisible();
+      for (var index = 0; index < window.collectionViews()[0].cells().length; index++)
+      {
+      
+      var currentCell = window.collectionViews()[0].cells()[index];
+      window.collectionViews()[0].scrollToElementWithName(currentCell.name());
+      
+      currentCell.scrollToVisible();
+      
+      
+      
+      }
+
+      //target.delay(2);
+      //window.buttons()[5].tap();
      
       });
 
