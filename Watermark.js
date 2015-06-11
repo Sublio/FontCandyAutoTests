@@ -1,6 +1,6 @@
-/*#import "Screen.js";
+#import "Screen.js";
 #import "env.js";
-*/
+
 /*
 //iPhone
 if(target.model().match("iPhone")){
@@ -89,9 +89,6 @@ test("Проверяю что ватермарка есть на экране и
 
 
 
-var target = UIATarget.localTarget();
-
-target.frontMostApp().mainWindow().buttons()["Camera"].tap();
-target.delay(2);
-target.frontMostApp().mainWindow().buttons()["icon cancel"].tap();
+target.deactivateAppForDuration(5)
+target.delay(10)
 

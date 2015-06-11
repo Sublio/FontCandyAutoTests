@@ -25,9 +25,8 @@ test ("Cheking that Inspiration Button is available", function(){
       
       }
 
-      //target.delay(2);
-      //window.buttons()[5].tap();
-     
+      log("Делаем назад")
+      window.buttons()["icon cancel"].tap();
       });
 
 
@@ -126,7 +125,7 @@ test("Берем картинку, кропаем ее и проверяем ч�
       
 
 
-test("Проверим все шрифты по одному добавляя кажды по отдельности", function(){
+test("Проверим все шрифты по одному добавляя каждый по отдельности", function(){
      target.delay(2);
      window.scrollViews()[0].collectionViews()[0].cells()[0].tap();
      target.delay(2);
