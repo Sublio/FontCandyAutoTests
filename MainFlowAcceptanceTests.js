@@ -40,23 +40,8 @@ test("Проверим что камера доступна и работает"
      
      });
 
-test("Проверяем что кнопка вспышки, переключение камеры, снятия снимка, кнопка отмены и кнопка таймера есть на экране камеры", function(){
-  target.delay(1);
-  window.buttons()["Camera"].tap();
-
-  var facetimebutton = window.buttons()["icon camera facetime"];
-  var takeshotbutton = window.buttons()["btn take shot"];
-  var cancelbutton = window.buttons()["icon cancel"];
-  var cameratimerbutton = window.buttons()["icon camera timer"];
-  var flashbutton = window.buttons()[0];
-  assert(facetimebutton.isValid(), "facetimebutton not found");
-  assert(takeshotbutton.isValid(), "takeshotbutton not found");
-  assert(cancelbutton.isValid(),"cancelbutton not found");
-  assert(cameratimerbutton.isValid(),"cameratimerbutton not found");
-  assert(flashbutton.isValid(), "flashbutton not found")
-  log("All done. Getting back");
-  cancelbutton.tap();
-})
+#import "Screen.js";
+#import "env.js";
 
 
 
@@ -95,6 +80,235 @@ test("Проверяем что кнопка таймера имеет 4 пол�
   window.buttons()['icon cancel'].tap();
 
   log("All done");
+
+})
+
+
+test("Проверяем что при таймере в 3 сек он действительно отчитывает 3 секунды перед снимкомs",function(){
+   target.delay(1);
+   window.buttons()["Camera"].tap();
+   var cameratimerbutton = window.buttons()["icon camera timer"];
+   cameratimerbutton.tap();
+
+   target.delay(2);
+  var firstTimerNumber = window.staticTexts()[0];
+  var secondTimerNumber = window.staticTexts()[1];
+  assertEqual(firstTimerNumber.value(),'0',"WrongTimer");
+  assertEqual(secondTimerNumber.value(),'3',"WrongTimer");
+  window.buttons()['btn take shot'].tap();
+  log(secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(secondTimerNumber.value(),'2',"WrongTimer");
+  log(secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(secondTimerNumber.value(),'1',"WrongTimer");
+  log(secondTimerNumber.value());
+  window.buttons()['icon cancel'].tap();
+  target.delay(3);
+  log("All done");
+
+
+})
+
+test("Проверяем что при таймере в 5 секунд он действительно отчитывает 5 секунд перед снимком",function(){
+
+  target.delay(1);
+  window.buttons()['Camera'].tap();
+  var cameratimerbutton = window.buttons()["icon camera timer"];
+  cameratimerbutton.tap();
+  target.delay(2);
+  var firstTimerNumber = window.staticTexts()[0];
+  var secondTimerNumber = window.staticTexts()[1];
+  firstTimerNumber.tap();
+  target.delay(1);
+  assertEqual(firstTimerNumber.value(),'0',"WrongTimer");
+  assertEqual(secondTimerNumber.value(),'5',"WrongTimer");
+  window.buttons()["btn take shot"].tap();
+  
+  target.delay();
+  assertEqual(secondTimerNumber.value(),'5',"WrongTimer");
+  log(secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(secondTimerNumber.value(),'4',"WrongTimer");
+  log(secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(secondTimerNumber.value(),'3',"WrongTimer");
+  log(secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(secondTimerNumber.value(),'2',"WrongTimer");
+  log(secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(secondTimerNumber.value(),'1',"WrongTimer");
+  log(secondTimerNumber.value());
+  window.buttons()['icon cancel'].tap();
+  target.delay(2)
+  log("All done");
+
+
+}
+  )
+
+test(" Проверяем что при таймере в 10 секунд он действительно отчитывает 10 секунд перд снимком",function(){
+  target.delay(1);
+  window.buttons()['Camera'].tap();
+  var cameratimerbutton = window.buttons()['icon camera timer'];
+  cameratimerbutton.tap();
+  target.delay(2);
+  var firstTimerNumber = window.staticTexts()[0];
+  var secondTimerNumber = window.staticTexts()[1];
+  firstTimerNumber.tap();
+  firstTimerNumber.tap();
+  target.delay(1);
+  window.buttons()['btn take shot'].tap();
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'09',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value())
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'08',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'07',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1)
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'06',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'05',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'04',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value())
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'03',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'02',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value())
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'01',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  window.buttons()['icon cancel'].tap()
+  target.delay(2);
+  log("All done");
+
+
+
+
+})
+
+test("Проверяем что при таймере в 20 секунд он действительно отчитывает 20 секунд перед снимком",function(){
+  target.delay(1);
+  window.buttons()['Camera'].tap();
+  var cameratimerbutton = window.buttons()['icon camera timer'];
+  cameratimerbutton.tap();
+  target.delay(2);
+  var firstTimerNumber = window.staticTexts()[0];
+  var secondTimerNumber = window.staticTexts()[1];
+  firstTimerNumber.tap();
+  firstTimerNumber.tap();
+  firstTimerNumber.tap();
+  target.delay(1);
+  window.buttons()['btn take shot'].tap();
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'19',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value())
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'18',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'17',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1)
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'16',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'15',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'14',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value())
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'13',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'12',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value())
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'11',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'10',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value())
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'09',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'08',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1)
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'07',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'06',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'05',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value())
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'04',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'03',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value())
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'02',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'01',"WrongTimer");
+  log(firstTimerNumber.value()+secondTimerNumber.value());
+  window.buttons()['icon cancel'].tap()
+  target.delay(2);
+  log("All done");
+})
+
+test(" Проверяем что при клике на 20 таймер снова станвоится на 03 секунды",function(){
+  target.delay();
+  window.buttons()['Camera'].tap();
+  var cameratimerbutton = window.buttons()['icon camera timer'];
+  cameratimerbutton.tap();
+  target.delay(2);
+  var firstTimerNumber = window.staticTexts()[0];
+  var secondTimerNumber = window.staticTexts()[1];
+  firstTimerNumber.tap();
+  firstTimerNumber.tap();
+  firstTimerNumber.tap();
+  firstTimerNumber.tap();
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'03',"WrongTimer");
+  target.delay(1);
+  window.buttons()['icon cancel'].tap();
+  log('All done');
+
+})
+
+
+test(" Проверяем что при клике на 20 таймер снова станвоится на 03 секунды",function(){
+  target.delay();
+  window.buttons()['Camera'].tap();
+  var cameratimerbutton = window.buttons()['icon camera timer'];
+  cameratimerbutton.tap();
+  target.delay(2);
+  var firstTimerNumber = window.staticTexts()[0];
+  var secondTimerNumber = window.staticTexts()[1];
+  firstTimerNumber.tap();
+  firstTimerNumber.tap();
+  firstTimerNumber.tap();
+  firstTimerNumber.tap();
+  target.delay(1);
+  assertEqual(firstTimerNumber.value()+secondTimerNumber.value(),'03',"WrongTimer");
+  target.delay(1);
+  window.buttons()['icon cancel'].tap();
+  log('All done');
 
 })
 
