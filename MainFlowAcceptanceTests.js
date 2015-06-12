@@ -12,7 +12,7 @@ test ("Cheking that Inspiration Button is available", function(){
       target.delay(2);
       log("Ждем пока картинки загрузятся");
       target.delay(4);
-      //window.collectionViews()[0].cells()[80].scrollToVisible();
+      
       for (var index = 0; index < window.collectionViews()[0].cells().length; index++)
       {
       
@@ -20,13 +20,13 @@ test ("Cheking that Inspiration Button is available", function(){
       window.collectionViews()[0].scrollToElementWithName(currentCell.name());
       
       currentCell.scrollToVisible();
-      
+      target.delay(1);
       
       
       }
-
+    
       log("Делаем назад")
-      window.buttons()["icon cancel"].tap();
+      window.buttons()["icon arrow down"].tap();
       });
 
 
@@ -40,6 +40,64 @@ test("Проверим что камера доступна и работает"
      
      });
 
+test("Проверяем что кнопка вспышки, переключение камеры, снятия снимка, кнопка отмены и кнопка таймера есть на экране камеры", function(){
+  target.delay(1);
+  window.buttons()["Camera"].tap();
+
+  var facetimebutton = window.buttons()["icon camera facetime"];
+  var takeshotbutton = window.buttons()["btn take shot"];
+  var cancelbutton = window.buttons()["icon cancel"];
+  var cameratimerbutton = window.buttons()["icon camera timer"];
+  var flashbutton = window.buttons()[0];
+  assert(facetimebutton.isValid(), "facetimebutton not found");
+  assert(takeshotbutton.isValid(), "takeshotbutton not found");
+  assert(cancelbutton.isValid(),"cancelbutton not found");
+  assert(cameratimerbutton.isValid(),"cameratimerbutton not found");
+  assert(flashbutton.isValid(), "flashbutton not found")
+  log("All done. Getting back");
+  cancelbutton.tap();
+})
+
+
+
+test("Проверяем что кнопка таймера имеет 4 положения: 03 05 10 20",function(){
+
+  target.delay(1);
+  window.buttons()["Camera"].tap();
+  var cameratimerbutton = window.buttons()["icon camera timer"];
+  cameratimerbutton.tap();
+  
+  var firstTimerNumber = window.staticTexts()[0];
+  var secondTimerNumber = window.staticTexts()[1];
+  
+//Check that on timer now is 03 seconds
+  assertEqual(firstTimerNumber.value(),'0', "WrongTimer");
+  assertEqual(secondTimerNumber.value(),'3',"WrongTimer");
+  
+  firstTimerNumber.tap();
+  target.delay(1);
+
+  assertEqual(firstTimerNumber.value(),'0', "WrongTimer");
+  assertEqual(secondTimerNumber.value(),'5',"WrongTimer");
+
+  firstTimerNumber.tap();
+  target.delay(1);
+
+  assertEqual(firstTimerNumber.value(),'1',"WrongTimer");
+  assertEqual(secondTimerNumber.value(),'0',"WrongTimer");
+
+  firstTimerNumber.tap()
+  target.delay(1)
+
+  assertEqual(firstTimerNumber.value(),'2',"WrongTImer");
+  assertEqual(secondTimerNumber.value(),'0',"WrongTimer");
+
+  window.buttons()['icon cancel'].tap();
+
+  log("All done");
+
+})
+
 
 test("Проверим что Settings кнопка доступна и посмотрим что внутри",function(){
      target.delay(2);
@@ -50,7 +108,7 @@ test("Проверим что Settings кнопка доступна и посм
     
      
      
-     target.delay();
+     
      
      });
 
